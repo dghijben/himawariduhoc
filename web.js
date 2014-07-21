@@ -1,7 +1,8 @@
 var gzippo = require('gzippo');
 var express = require('express');
-var app = express();
 var logger = require('morgan');
+var app = express();
+
 
 app.use(logger('dev'));
 app.use(gzippo.staticGzip('' + __dirname + '/dist'));
