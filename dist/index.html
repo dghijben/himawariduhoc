@@ -9,10 +9,9 @@
     <title></title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width">
-    <link type="text/css" rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:100,200,300,400,500,700">
     <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
 
-        <link rel="stylesheet" href="styles/17fd8fc8.main.css">
+        <link rel="stylesheet" href="styles/0d52a558.main.css">
 </head>
   <body ng-app="himawariduhocApp">
     <!--[if lt IE 7]>
@@ -25,8 +24,30 @@
     <![endif]-->
 
     <!-- Add your site or application content here -->
-
-    <div ui-view=""></div>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <h1>Off Canvas Menu</h1>
+          <div class="visible-xs">
+            <button class="btn btn-primary btn-xs" data-toggle="offcanvas">Toggle</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="container">
+      <div class="row row-offcanvas row-offcanvas-left">
+        <div class="col-sm-3 sidebar-offcanvas">
+          <ul>
+            <li><a ui-sref="founders">Founders</a></li>
+          </ul>
+        </div>
+        <div class="col-sm-6">
+            <div ui-view=""></div>
+        </div>
+      </div>
+    </div>
+    
+    
 
 
     <!-- Google Analytics: change UA-XXXXX-X to be your site's ID -->
@@ -42,8 +63,15 @@
 
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
     <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.0.7/angular.min.js"></script>
+    <script>
+      $(document).ready(function () {
+        $('[data-toggle="offcanvas"]').click(function () {
+          $('.row-offcanvas').toggleClass('active')
+        });
+      });
+    </script>
 
-        <script src="scripts/3ac34743.plugins.js"></script>
+        <script src="scripts/d41d8cd9.plugins.js"></script>
 
         <script src="scripts/5d4bc056.modules.js"></script>
 
