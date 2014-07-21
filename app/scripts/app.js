@@ -1,7 +1,6 @@
 'use strict';
 
-
-  angular.module('himawariduhocApp', [
+angular.module('himawariduhocApp', [
   'ngCookies',
   'ngResource',
   'ngSanitize',
@@ -9,6 +8,7 @@
 ])
   .config(function ($stateProvider, $urlRouterProvider) {
     //delete $httpProvider.defaults.headers.common['X-Requested-With'];
+    
     $urlRouterProvider.otherwise('/');
     $stateProvider
       .state('index', {
@@ -16,8 +16,8 @@
         templateUrl: 'views/main.html',
         controller:'MainCtrl'
       })
-  })
-
-
-
-
+      .state('/founders', {
+        templateUrl: 'views/founders.html',
+        controller: 'FoundersCtrl'
+      });
+  });
