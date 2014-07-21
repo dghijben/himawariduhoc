@@ -16,7 +16,8 @@ angular.module('himawariduhocApp', [
         templateUrl: 'views/main.html',
         controller:'MainCtrl'
       })
-      .state('/founders', {
+      .state('founders', {
+        url: '/founders',
         templateUrl: 'views/founders.html',
         controller: 'FoundersCtrl'
       });
