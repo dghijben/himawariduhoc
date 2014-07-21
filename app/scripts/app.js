@@ -6,7 +6,7 @@ angular.module('himawariduhocApp', [
   'ngSanitize',
   'ui.router'
 ])
-  .config(function ($stateProvider, $urlRouterProvider, $locationProvider) {
+  .config(function ($stateProvider, $urlRouterProvider) {
     //delete $httpProvider.defaults.headers.common['X-Requested-With'];
     
     $urlRouterProvider.otherwise('/');
@@ -21,5 +21,5 @@ angular.module('himawariduhocApp', [
         templateUrl: 'views/founders.html',
         controller: 'FoundersCtrl'
       });
-    $locationProvider.html5Mode(true);
+
   });
