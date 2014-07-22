@@ -1,11 +1,7 @@
-<div class="container">
-	<div class="row">
-		<div class="col-md-12">
-			<h3>Enjoy coding! - Yeoman</h3>
-  			<a ui-sref="founders">Founders</a>
-  			<ul>
-			    <li ng-repeat="thing in awesomeThings">{{thing}}</li>
-			</ul>
-		</div>
-	</div>
+<div class="text-center">
+	<h3>Enjoy coding! - Yeoman</h3>
+	<a ui-sref="founders">Founders</a>
+	<ul ng-repeat="thing in awesomeThings" class="list-unstyled"> 
+		<li>{{thing}}</li>
+	</ul>
 </div>
