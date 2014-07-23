@@ -102,15 +102,15 @@ module.exports = function (grunt) {
       },
       server: '.tmp'
     },
-    jshint: {
-      options: {
-        jshintrc: '.jshintrc'
-      },
-      all: [
-        'Gruntfile.js',
-        '<%= yeoman.app %>/scripts/{,*/}*.js'
-      ]
-    },
+    //jshint: {
+    //  options: {
+    //    jshintrc: '.jshintrc'
+    //  },
+    //  all: [
+    //    'Gruntfile.js',
+    //    '<%= yeoman.app %>/scripts/{,*/}*.js'
+    //  ]
+    //},
     coffee: {
       options: {
         sourceMap: true,
@@ -361,7 +361,7 @@ module.exports = function (grunt) {
   ]);
 
   grunt.registerTask('default', [
-    'jshint',
+    //'jshint',
     'test',
     'build'
   ]);
